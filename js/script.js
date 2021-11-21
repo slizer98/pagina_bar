@@ -1,6 +1,13 @@
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.navbar');
 
+let texto = "Hola a todos. Nosotros somos el equipo 2, y nuestro proyecto es sobre un bar"
+const hablar = (texto) => speechSynthesis.
+speak(new SpeechSynthesisUtterance(texto));
+function presentacion(){
+    hablar(texto)
+}
+
 menu.onclick = () =>{
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
@@ -16,3 +23,5 @@ document.querySelectorAll('.image-slider img').forEach(images => {
         document.querySelector('.main-home-image').src= src;
     }
 })
+
+// setTimeout(hablar(texto), 3000 );
