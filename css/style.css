@@ -276,6 +276,24 @@ section{
     height: 8rem;
     margin-left: -6rem;
 }
+.menu .box-container .box .content-btn{
+    display: flex;
+    justify-content: space-between;
+}
+.menu .box-container .box .content-btn button{
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--main-color);
+    width: 15rem;
+    font-weight: bold;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    margin-left: 6rem;
+}
+.menu .box-container .box .content-btn button:hover{
+    border: var(--border-hover);
+    border-radius: var(--border-radius-hover);
+}
 .menu .box-container .box .content h3{
     font-size: 2.2rem;
     color: var(--main-color);
@@ -293,6 +311,52 @@ section{
     color: var(--main-color);
     line-height: 1.8;
     padding: 1rem 0;
+    font-weight: bold;
+}
+
+/* FOOTER */
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(246, 246, 198);
+}
+.footer h3{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.footer .box-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+.footer .box-container .box{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: var(--main-color);
+}
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: var(--main-color);
+}
+.footer .box-container .box a i{
+    padding-right: .5rem;
+}
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+.footer .credit{
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    color: var(--main-color);
+}
+.footer .credit span{
+    border-bottom: var(--border-hover);
 }
 
 
@@ -359,6 +423,15 @@ section{
     .home .row .image img{
         height: 35rem;
         /* width: 100%; */
+    }
+    .footer .box-container{
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        gap: 1.5rem;
+    }
+    .footer .credit{
+        font-size: 1.5rem;
     }
 
     
