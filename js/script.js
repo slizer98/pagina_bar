@@ -23,5 +23,10 @@ document.querySelectorAll('.image-slider img').forEach(images => {
         document.querySelector('.main-home-image').src= src;
     }
 })
+let show_items = document.querySelector('.shopping-cart');
+let car = document.querySelector('.car');
 
-// setTimeout(hablar(texto), 3000 );
+
+car.onclick = () =>{
+    show_items.classList.toggle('activate');
+}

@@ -7,6 +7,7 @@
     <title>Bar Equipo 2</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./assets/icons/jarro-de-cerveza.png" />
 </head>
@@ -19,7 +20,58 @@
             <a href="#about">Nosotros</a>
             <a href="#menu">Menu</a>
         </nav>
-        <a href="#" class="btn" >Reservar Mesa</a>
+            <button class="car"><i class="fas fa-cart-plus"></i></button>
+            <div class="shopping-cart">
+                <div class="container">
+                    <h2 class="text-center">CARRITO</h2>
+                    <hr>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="shopping-cart-header">
+                                <h6>Producto</h6>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="shopping-cart-header">
+                                <h6 class="text-truncate">Precio</h6>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="shopping-cart-header">
+                                <h6>Cantidad</h6>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        
+            <div class="shopping-cart-items shoppingCartItemsContainer"></div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="shopping-cart-total d-flex align-items-center justify-content-center flex-column">
+                        <p class="mb-0 mt-3">Total:</p>
+                        <p class="ml-4 mb-0 shoppingCartTotal ">$0</p>
+                        <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
+                            data-delay="2000">
+                            <div class="toast-header">
+                                <span>🆗</span>
+                                <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="toast-body text-white">
+                                Se aumentó correctamente la cantidad
+                            </div>
+                        </div>
+                        <button class="btn-1 ml-auto comprarButton" type="button" data-toggle="modal"
+                            data-target="#comprarModal">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <a href="reserva.html" class="btn" >Reservar Mesa</a>
+
     </header>
     <main>
         <!-- home section starts -->
@@ -76,242 +128,242 @@
         <section class="menu" id="menu">
             <h1 class="heading">Nuestro Menu <span>Bebidas...</span></h1>
             <div class="box-container">
-                <a href="#" class="box">
+                <div class="box">
                     <img src="./assets/img/indio2.png" alt="cerveza indio">
                     <div class="content">
-                        <h3>Cerveza Indio</h3>
+                        <h3 class="box-title">Cerveza Indio</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Cerveza Indio">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/corona2.png" alt="cerveza corona">
                     <div class="content">
-                        <h3>Cerveza Corona</h3>
+                        <h3 class="box-title">Cerveza Corona</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Cerveza Corona">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/ultra2.png" alt="cerveza ultra">
                     <div class="content">
-                        <h3>Cerveza Ultra</h3>
+                        <h3 class="box-title">Cerveza Ultra</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Cerveza Ultra">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/pacifico2.png" alt="cerveza pacifico">
                     <div class="content">
-                        <h3>Cerveza pacifico</h3>
+                        <h3 class="box-title">Cerveza pacifico</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Cerveza Pacifico">Agregar</button>
                         </div>
                     </div>
-                </a>
+                </div>
 
-                <a href="#" class="box">
+                <div class="box">
                     <img src="./assets/img/don-julio.png" alt="don julio">
                     <div class="content">
-                        <h3>Don Julio</h3>
+                        <h3 class="box-title">Don Julio</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Don Julio">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/cuervo.png" alt="jose cuervo">
                     <div class="content">
-                        <h3>Jose Cuervo</h3>
+                        <h3 class="box-title">Jose Cuervo</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Jose Cuervo">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/herradura.png" alt="herradura">
                     <div class="content">
-                        <h3>Herradura</h3>
+                        <h3 class="box-title">Herradura</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Herradura">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/centenario.png" alt="centenario">
                     <div class="content">
-                        <h3>Centenario</h3>
+                        <h3 class="box-title">Centenario</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Centenario">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/buchanas.png" alt="buchanas">
                     <div class="content">
-                        <h3>Buchanas</h3>
+                        <h3 class="box-title">Buchanas</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Buchanas">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/smirnoff.png" alt="smirnoff">
                     <div class="content">
-                        <h3>smirnoff</h3>
+                        <h3 class="box-title">Smirnoff</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Smirnoff">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/torres.png" alt="torres 10">
                     <div class="content">
-                        <h3>torres 10</h3>
+                        <h3 class="box-title">torres 10</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Torres Diez">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/red-label.png" alt="red-label">
                     <div class="content">
-                        <h3>Red Label</h3>
+                        <h3 class="box-title">Red Label</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Red Label">Agregar</button>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
             
             <h1 class="heading">Nuestro Menu <span>Comidas...</span></h1>
             <div class="box-container">
-                <a href="#" class="box">
+                <div class="box">
                     <img src="./assets/img/alitas.png" alt="alitas">
                     <div class="content">
-                        <h3>Alitas</h3>
+                        <h3 class="box-title">Alitas</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Alitas">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/boneless.png" alt="boneless">
                     <div class="content">
-                        <h3>Boleness</h3>
+                        <h3 class="box-title">Boleness</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Boneless">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/ceviche.png" alt="ceviche">
                     <div class="content">
-                        <h3>Ceviche</h3>
+                        <h3 class="box-title">Ceviche</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Copa de ceviche">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/coctel.png" alt="coctel">
                     <div class="content">
-                        <h3>Coctel</h3>
+                        <h3 class="box-title">Coctel</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Coctel">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/hamburguesa.png" alt="hamburguesa">
                     <div class="content">
-                        <h3>Hamburguesas</h3>
+                        <h3 class="box-title">Hamburguesas</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Hamburguesas">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/orden-papas.png" alt="orden-papas">
                     <div class="content">
-                        <h3>Orden-Papas</h3>
+                        <h3 class="box-title">Orden-Papas</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Orden de papas">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/quesadillas.png" alt="quesadillas">
                     <div class="content">
-                        <h3>Quesadillas</h3>
+                        <h3 class="box-title">Quesadillas</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Quesadillas">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/tacos.png" alt="tacos">
                     <div class="content">
-                        <h3>Tacos</h3>
+                        <h3 class="box-title">Tacos</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Taquitos">Agregar</button>
                         </div>
                     </div>
-                </a>
-                <a href="#" class="box">
+                </div>
+                <div class="box">
                     <img src="./assets/img/menudo.png" alt="menudo">
                     <div class="content">
-                        <h3>Menudo</h3>
+                        <h3 class="box-title">Menudo</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
-                            <span>$25.00</span>
-                            <button>Agregar</button>
+                            <span class="box-price">$25.00</span>
+                            <button class="add" value="Plato Menudo">Agregar</button>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </section>
         <!-- menu section end -->
@@ -341,5 +393,6 @@
     </main>
 
     <script src="./js/script.js"></script>
+    <script src="./js/carrito.js"></script>
 </body>
 </html>

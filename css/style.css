@@ -60,6 +60,17 @@ section{
     margin-top: 1rem;
     font-size: 1.7rem;
 }
+.btn-1{
+    display: inline-block;
+    padding: .7rem 1.5rem;
+    border-radius: var(--border-radius);
+    color: var(--main-color);
+    background: none;
+    border: var(--border);
+    cursor: pointer;
+    margin-top: .3rem;
+    font-size: .7rem;
+}
 .btn:hover{
     border-radius: var(--border-radius-hover);
     border: var(--border-hover);
@@ -96,6 +107,32 @@ section{
 .header .btn{
     margin-top: 0;
 }
+.header .car{
+    margin-top: 1rem;
+}
+.header .car i{
+    margin-right: -10rem;
+    cursor: pointer;
+    font-size: 4.2rem ;
+    color: var(--main-color);
+}
+.shopping-cart{
+    width: 30rem;
+    height: 50rem;
+    background: #FFF;
+    /* margin-right: 20rem; */
+    border: var(--border);
+    position: absolute;
+    top: 9rem;
+    left: calc(60% - 15px);
+    display: none;
+    overflow: auto;
+
+}
+.activate{
+    display: block;
+}
+
 #menu-btn{
     font-size: 3rem;
     color: var(--main-color);
@@ -278,7 +315,8 @@ section{
 }
 .menu .box-container .box .content-btn{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 .menu .box-container .box .content-btn button{
     cursor: pointer;
@@ -307,12 +345,13 @@ section{
     padding: 1rem 0;
 }
 .menu .box-container .box .content span{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--main-color);
     line-height: 1.8;
     padding: 1rem 0;
     font-weight: bold;
 }
+
 
 /* FOOTER */
 .footer{
@@ -396,6 +435,11 @@ section{
         margin: 0;
         padding: 1.5rem 2rem;
     }
+    .show{
+        position: absolute;
+        top: 9rem;
+        left: calc(50% - 15px);
+    }
     .home{
         text-align: center;
     }
@@ -420,6 +464,11 @@ section{
     html{
         font-size: 50%;
     }
+    .show{
+        position: absolute;
+        top: 9rem;
+        left: calc(40% - 7px);
+    }
     .home .row .image img{
         height: 35rem;
         /* width: 100%; */
@@ -435,4 +484,12 @@ section{
     }
 
     
+}
+
+@media(max-width: 400px){
+    .show{
+        position: absolute;
+        top: 9rem;
+        left: calc(35% - 10px);
+    }
 }
