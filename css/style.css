@@ -18,6 +18,9 @@
     text-transform: capitalize;
     transition: all .2s linear;
 }
+a{
+    text-decoration: none;
+}
 
 html{
     font-size: 62.5%;
@@ -94,6 +97,15 @@ section{
     font-family: "Dancing Script", cursive;
     margin: 0;
     text-shadow: 0 0 5px red, 0 0 15px red, 0 0 30px red, 0 0 50px red;
+    animation: logo 1.6s alternate infinite;
+}
+@keyframes logo{
+    0%,100%{
+        color: red;
+    }
+    50%{
+        color: blue;
+    }
 }
 .header .logo img{
     padding-left: .5rem;
@@ -127,7 +139,6 @@ section{
     left: calc(60% - 15px);
     display: none;
     overflow: auto;
-
 }
 .activate{
     display: block;
@@ -145,7 +156,7 @@ section{
 .home{
     min-height: 100vh;
     padding-top: 12rem;
-    background: url(../assets/img/fondoBar.jpg);
+    background: url(../assets/img/bg-h.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -159,7 +170,7 @@ section{
     flex: 1 1 42rem;
     backdrop-filter: blur(4px) saturate(182%);
     -webkit-backdrop-filter: blur(4px) saturate(182%);
-    background-color: rgba(228, 228, 228, 0.27);
+    background-color: rgba(0, 0, 0, 0.27);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
@@ -183,7 +194,12 @@ section{
 
 .home .row .content h3{
     font-size: 6.5rem;
-    color: rgb(49, 49, 49);
+    color: #fff;
+}
+.home .row .content a{
+    margin-bottom: 2rem;
+    color: #fff;
+    border-radius: #fff;
 }
 
 .home .image-slider{
@@ -401,7 +417,7 @@ section{
 
 
 
-@media(max-width: 768px){
+/* @media(max-width: 768px){
     .heading{
         font-size: 6rem;
     }
@@ -471,7 +487,7 @@ section{
     }
     .home .row .image img{
         height: 35rem;
-        /* width: 100%; */
+        
     }
     .footer .box-container{
         display: flex;
@@ -492,4 +508,4 @@ section{
         top: 9rem;
         left: calc(35% - 10px);
     }
-}
+} */

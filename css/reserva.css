@@ -1,0 +1,128 @@
+:root{
+    --main-color : #fff;
+    --border-radius:95% 4% 97% 5%/ 4% 94% 3% 95%; 
+    --border-radius-hover:4% 95% 6% 95% / 95% 4% 92% 5%;
+    --border:var(--main-color) solid .2rem;
+    --border-hover:var(--main-color) dashed .2rem;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    display: inline-block;
+    padding: .9rem 1.5rem;
+    border-radius: var(--border-radius);
+    color: var(--main-color);
+    background: none;
+    border: var(--border);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+.btn-1{
+    display: inline-block;
+    padding: .7rem 1.5rem;
+    border-radius: var(--border-radius);
+    color: var(--main-color);
+    background: none;
+    border: var(--border);
+    cursor: pointer;
+    margin-top: .3rem;
+    font-size: .7rem;
+}
+.btn:hover{
+    border-radius: var(--border-radius-hover);
+    border: var(--border-hover);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #FFF;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 9%;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+.header .logo{
+    font-size: 2.2rem;
+    font-family: "Dancing Script", cursive;
+    margin: 0;
+    text-shadow: 0 0 5px rgb(112, 114, 7), 0 0 15px rgb(126, 108, 10), 0 0 30px rgb(134, 136, 16), 0 0 50px rgb(128, 119, 7);
+    animation: logo 1.6s alternate infinite;
+}
+
+@keyframes logo{
+    0%,100%{
+        color: red;
+    }
+    50%{
+        color: blue;
+    }
+}
+
+.header .logo img{
+    padding-left: .5rem;
+    width: 3.2rem;
+}
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+.header .btn{
+    margin-top: 0;
+}
+.header .car{
+    margin-top: 1rem;
+}
+.header .car i{
+    margin-right: -10rem;
+    cursor: pointer;
+    font-size: 4.2rem ;
+    color: var(--main-color);
+}
+#inicio{
+    color: #000;
+}
+.home{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 8rem;
+    background: url(../assets/img/fondoBar.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.home .content{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    backdrop-filter: blur(4px) saturate(182%);
+    -webkit-backdrop-filter: blur(4px) saturate(182%);
+    background-color: rgba(0, 0, 0, 0.27);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    color: #fff;
+}
