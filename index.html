@@ -7,7 +7,7 @@
     <title>Bar Equipo 2</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/medias.css">
     <link rel="shortcut icon" href="./assets/icons/jarro-de-cerveza.png" />
@@ -27,7 +27,7 @@
                     <h2 class="text-center">CARRITO</h2>
                     <hr>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-4">
                             <div class="shopping-cart-header">
                                 <h6>Producto</h6>
                             </div>
@@ -37,7 +37,7 @@
                                 <h6 class="text-truncate">Precio</h6>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-2">
                             <div class="shopping-cart-header">
                                 <h6>Cantidad</h6>
                             </div>
@@ -53,16 +53,7 @@
                         <p class="ml-4 mb-0 shoppingCartTotal ">$0</p>
                         <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
                             data-delay="2000">
-                            <div class="toast-header">
-                                <span>🆗</span>
-                                <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
-                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="toast-body text-white">
-                                Se aumentó correctamente la cantidad
-                            </div>
+
                         </div>
                         <button class="btn-1 ml-auto comprarButton" type="button" data-toggle="modal"
                             data-target="#comprarModal">Comprar</button>
@@ -75,6 +66,12 @@
 
     </header>
     <main>
+        <div class="modal-compra modal-compra-activate">
+            <div>
+                <h3>Gracias Por Ordenar</h3>
+                <p>💾</p>
+            </div>
+        </div>
         <!-- home section starts -->
         <section class="home" id="home">
             <div class="row">
@@ -131,7 +128,7 @@
                 <div class="box">
                     <img src="./assets/img/indio2.png" alt="cerveza indio">
                     <div class="content">
-                        <h3 class="box-title">Cerveza Indio</h3>
+                        <h3 class="box-title">Indio</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
                             <span class="box-price">$25.00</span>
@@ -142,7 +139,7 @@
                 <div class="box">
                     <img src="./assets/img/corona2.png" alt="cerveza corona">
                     <div class="content">
-                        <h3 class="box-title">Cerveza Corona</h3>
+                        <h3 class="box-title">Corona</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
                             <span class="box-price">$25.00</span>
@@ -153,7 +150,7 @@
                 <div class="box">
                     <img src="./assets/img/ultra2.png" alt="cerveza ultra">
                     <div class="content">
-                        <h3 class="box-title">Cerveza Ultra</h3>
+                        <h3 class="box-title">Ultra</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
                             <span class="box-price">$25.00</span>
@@ -164,11 +161,11 @@
                 <div class="box">
                     <img src="./assets/img/pacifico2.png" alt="cerveza pacifico">
                     <div class="content">
-                        <h3 class="box-title">Cerveza pacifico</h3>
+                        <h3 class="box-title">pacifico</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum accusantium, qui commodi perferendis laborum neque harum est aperiam suscipit iusto!</p>
                         <div class="content-btn">
                             <span class="box-price">$25.00</span>
-                            <button class="add" value="Cerveza Pacifico">Agregar</button>
+                            <button class="add " value="Cerveza Pacifico">Agregar</button>
                         </div>
                     </div>
                 </div>
@@ -391,6 +388,13 @@
         
         <!-- FOOTER section end -->
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
 
     <script src="./js/script.js"></script>
     <script src="./js/carrito.js"></script>

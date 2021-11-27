@@ -25,8 +25,10 @@ document.querySelectorAll('.image-slider img').forEach(images => {
 })
 let show_items = document.querySelector('.shopping-cart');
 let car = document.querySelector('.car');
+let body = document.querySelector('body');
 
 
 car.onclick = () =>{
     show_items.classList.toggle('activate');
 }
+

@@ -32,10 +32,10 @@
         margin: 0;
         padding: 1.5rem 2rem;
     }
-    .show{
+    .shopping-cart{
         position: absolute;
         top: 9rem;
-        left: calc(50% - 15px);
+        left: calc(45% - 15px);
     }
     .home{
         text-align: center;
@@ -53,18 +53,34 @@
         margin-left: 0;
         margin-top: -6rem;
     }
+    .logo{
+        font-size: 1rem;
+    }
+    .btn{
+        font-size: 1.3rem;
+    }
     
 }
 
-
+@media(max-width: 550px){
+    .logo{
+        font-size: 1rem;
+    }
+    .btn{
+        font-size: 1.3rem;
+    }
+    .car{
+        margin-right: 50px;
+    }
+}
 @media(max-width: 450px){
     html{
         font-size: 50%;
     }
-    .show{
+    .shopping-cart{
         position: absolute;
         top: 9rem;
-        left: calc(40% - 7px);
+        left: calc(35% - 4px);
     }
     .home .row .image img{
         height: 35rem;
@@ -80,13 +96,40 @@
         font-size: 1.5rem;
     }
 
+    .logo{
+        display: none;
+    }
+    .btn{
+        font-size: 1.3rem;
+    }
     
 }
 
 @media(max-width: 400px){
-    .show{
+    .shopping-cart{
         position: absolute;
         top: 9rem;
-        left: calc(35% - 10px);
+        left: calc(60% - 100px);
+    }
+    .logo{
+        display: none;
+    }
+    .btn{
+        font-size: 1.3rem;
+    }
+ 
+}
+
+@media(max-width: 350px){
+    .shopping-cart{
+        position: absolute;
+        top: 9rem;
+        left: calc(55% - 100px);
+    }
+    .logo{
+        display: none;
+    }
+    .btn{
+        font-size: 1.1rem;
     }
 }

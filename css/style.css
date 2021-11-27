@@ -6,6 +6,9 @@
     --border:var(--main-color) solid .2rem;
     --border-hover:var(--main-color) dashed .2rem;
 }
+::-webkit-scrollbar{
+    display: none;
+}
 
 *{
     font-family: 'Poppins', sans-serif;
@@ -27,6 +30,71 @@ html{
     overflow-x: hidden;
     scroll-padding-top: 7rem;
     scroll-behavior: smooth;
+}
+main .modal-compra{
+    width: 60rem;
+    height: 30rem;
+    display: none;
+    border: var(--main-color) 1px solid;
+    /* border-radius: var(--border-radius); */
+    background-color:#fff;
+    position: fixed;
+    top: calc(50% - 15rem);
+    left: calc(50% - 30rem);
+    align-self: center;
+    z-index: 10000;
+
+}
+.modal-compra-activate{
+    display: block;
+}
+main .modal-compra h3{
+    font-size: 3rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-top: 5rem;
+    animation: orden 2s linear infinite;
+}
+
+@keyframes orden{
+    0%{
+        font-size: 3rem;
+    }
+    50%{
+        font-size: 4rem;
+    }
+    100%{
+        font-size: 3rem;
+    }
+}
+
+main .modal-compra p{
+    font-size: 10rem;
+    font-weight: bold;
+    text-align: center;
+    animation: orden-icon 4s linear infinite;
+}
+
+@keyframes orden-icon{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(180deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    55%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
 }
 
 section{
@@ -52,16 +120,16 @@ section{
     color: var(--main-color);
     font-size: 4rem;
 }
-.btn{
+.btn, .add{
     display: inline-block;
-    padding: .9rem 1.5rem;
+    padding: 1.2rem 1.5rem;
     border-radius: var(--border-radius);
     color: var(--main-color);
     background: none;
     border: var(--border);
     cursor: pointer;
     margin-top: 1rem;
-    font-size: 1.7rem;
+    font-size: 2rem;
 }
 .btn-1{
     display: inline-block;
@@ -139,7 +207,28 @@ section{
     left: calc(60% - 15px);
     display: none;
     overflow: auto;
+    font-size: 1.2rem;
 }
+.shopping-cart-header{
+    width: 5rem;
+}
+
+.shopping-cart-quantity-input{
+    width: 4rem;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+.shopping-cart-item{
+    width: auto;
+}
+.buttonDelete{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .activate{
     display: block;
 }
