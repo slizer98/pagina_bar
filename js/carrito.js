@@ -1,6 +1,8 @@
 const addToCar = document.querySelectorAll(".add");
 const cartItemsContainer  = document.querySelector('.shoppingCartItemsContainer');
 const modalCompra = document.querySelector('.modal-compra');
+const serverUrlOrden = 'http://127.0.0.1:8000/';
+const pathOrdenes = 'ordenes/';
 
 addToCar.forEach(addCartButton => {
     addCartButton.addEventListener('click', addCartClicked);
@@ -15,11 +17,15 @@ function addCartClicked(event){
 
    const boxTitle = box.querySelector('.box-title').textContent;
    const boxPrice = box.querySelector('.box-price').textContent;
-   const boxImage = box.querySelector('img').src;   
+   const boxImage = box.querySelector('img').src;  
+   console.log(boxPrice);
+   const itemId = box.dataset.id;
+   
+   
    addItemsCart(boxTitle, boxPrice, boxImage);
 }
 
-function addItemsCart(boxTitle, boxPrice, boxImage){
+function addItemsCart(boxTitle, boxPrice, boxImage, itemId){
 
     const elementsTitle = cartItemsContainer.getElementsByClassName('shoppingCartItemTitle');
 
@@ -27,7 +33,7 @@ function addItemsCart(boxTitle, boxPrice, boxImage){
         if(elementsTitle[i].innerText === boxTitle){
            let elementQuantity = elementsTitle[i].parentElement.parentElement.parentElement.querySelector('.shoppingCartItemQuantity');
            elementQuantity.value++;
-           $('.toast').toast('show');
+        //    $('.toast').toast('show');
             updateShoppingCart();
            return;
         }
@@ -35,7 +41,7 @@ function addItemsCart(boxTitle, boxPrice, boxImage){
 
     const cartRow = document.createElement('div');
     const cartContent = `
-    <div class="row shoppingCartItem w-auto">
+    <div class="row shoppingCartItem w-auto" data-id=${itemId}>
           <div class="col-4">
               <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
                   <img src=${boxImage} class="shopping-cart-image w-25">
@@ -82,9 +88,20 @@ function updateShoppingCart(){
         const shoppingCartItemQuantity = Number(shoppingCartItemQuantityElement.value);
 
         totalPrice = totalPrice + shoppingCartItemPrice * shoppingCartItemQuantity;
+        
     });
     shoppingCartTotal.innerHTML = `$${totalPrice.toFixed(2)}`;
+    postToPOST(totalPrice);
 }
+
+function postToPOST(totalPrice, ){
+    const data = {
+        totalPrice: totalPrice
+    }
+}
+
+
+
 
 function removeShoppingCartItem(event){
     const buttonClicked = event.target;
@@ -103,11 +120,41 @@ function quantityChanged(event){
 
 function comprarButtonClicked(){
     modalCompra.style.display = 'block';
-    cartItemsContainer.innerHTML = '';
+
+    //get items shopping cart
+    const shoppingCartItems = getItemsInShoppingCart();
+
+    //add to local storage
+    addToLocalStorage('shoppingCart', shoppingCartItems);
 
     setTimeout(function(){
         modalCompra.style.display = 'none';
     }, 2000);
+    // Borrar los items del carrito
+    cartItemsContainer.innerHTML = '';
+
     updateShoppingCart();
 
+}
+
+function getItemsInShoppingCart(){
+    const shoppingCartItems = document.querySelectorAll('.shoppingCartItem');
+    const arrShoppingCartItems = [];
+    shoppingCartItems.forEach(shoppingCartItem => {
+        const shoppingCartItemQuantityElement = shoppingCartItem.querySelector('.shoppingCartItemQuantity');
+        const shoppingCartItemQuantity = Number(shoppingCartItemQuantityElement.value);
+        const itemId = shoppingCartItem.dataset.id;
+        console.log(shoppingCartItem.dataset.id);
+
+        const item = {
+            id: itemId,
+            quantity: shoppingCartItemQuantity
+        }
+        arrShoppingCartItems.push(item);
+    })
+    return arrShoppingCartItems;
+}
+
+function addToLocalStorage(key, items){
+    localStorage.setItem(key, JSON.stringify(items));
 }
