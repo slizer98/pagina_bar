@@ -5,6 +5,7 @@ const id = localStorage.getItem('idReservacion');
 const showReservation = document.getElementById('show-reservation');
 let lista = document.getElementById("lista-reservacion");
 let borrar = document.querySelector(".bborrar");
+let editar = document.querySelector(".beditar");
 
 
 // Agregar li al ul
@@ -57,4 +58,9 @@ borrar.addEventListener('click', () => {
                 window.location.href = "./index.html";
             })
     }
+})
+
+// reedirigir a editar
+editar.addEventListener('click', () => {
+    window.location.href = "./editar.html";
 })

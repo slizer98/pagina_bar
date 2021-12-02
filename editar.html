@@ -22,8 +22,8 @@
    <main>
         <div class="modal-compra modal-compra-activate">
             <div>
-                <h3>Mesa Reservada</h3>
-                <p>🤙</p>
+                <h3>Cambios Guardados</h3>
+                <p>📝</p>
             </div>
         </div>
         <section class="home" id="home">
@@ -32,24 +32,24 @@
                     <h2>EDITAR</h2>
                     <div>
                         <h4>Nombre:</h4>
-                        <input type="text"  name="nombre" required>
+                        <input id="nombre" type="text"  name="nombre" required value="">
 
                         <h4>Apellido:</h4>
-                        <input type="text" name="apellido" required>
+                        <input id="apellido" type="text" name="apellido" required value="">
 
                         <h4>Teléfono:</h4>
-                        <input type="text" name="telefono" required>
+                        <input id="telefono" type="text" name="telefono" required value="">
 
                         <h4>Personas:</h4>
-                        <input class="person" name="personas" type="number" placeholder="Numero de personas" required>
+                        <input id="personas" class="person" name="personas" type="number" value="" placeholder="Numero de personas" required>
                             
                         <h4>Fecha de reserva:</h4>
-                        <input class="date" name="fecha" type="date" required>
+                        <input id="fecha" class="date" name="fecha" type="date" required value="">
 
                         <h4>Comentarios:</h4>
-                        <textarea name="comentario" rows="5" cols="50" placeholder="comentario..."></textarea>
+                        <textarea id="comentarios" name="comentario" rows="5" cols="50" placeholder="comentario..."></textarea>
                     </div>
-                    <button class="btn" type="submit">RESERVAR</button>
+                    <button class="btn" type="submit">Guardar</button>
                 </form>
             </div>
         </section>
