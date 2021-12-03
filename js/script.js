@@ -1,5 +1,7 @@
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.navbar');
+let removeButton = document.getElementById('get-reservation');
+let removeShow = document.getElementById('show-reservation');
 
 let texto = "Hola a todos. Nosotros somos el equipo 2, y nuestro proyecto es sobre un bar"
 const hablar = (texto) => speechSynthesis.
@@ -31,4 +33,13 @@ let body = document.querySelector('body');
 car.onclick = () =>{
     show_items.classList.toggle('activate');
 }
+
+// quitar boton para reservar
+if (localStorage.getItem('reservacion') == 'true'){
+    removeButton.style.display = 'none';
+}
+if(localStorage.getItem('reservacion') == 'true'){
+    removeShow.style.display = 'inline-block';
+}
+
 

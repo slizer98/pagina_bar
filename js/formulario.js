@@ -3,7 +3,6 @@ const serverUrl = 'http://127.0.0.1:8000/';
 const pathReservacion = 'reservaciones/';
 let formulario = document.getElementById('formulario');
 const modalCompra = document.querySelector('.modal-compra');
-const removeReservation = document.querySelector('.btn');
 
 formulario.addEventListener('submit', function(e){
     e.preventDefault();
@@ -32,6 +31,8 @@ fetch(`${serverUrl}${pathReservacion}`, {
     .then(data => {
         data.status = 1;
         // console.log(data);
+        localStorage.setItem('reservacion', true);
+        
         localStorage.setItem('idReservacion', data.id);
         localStorage.setItem('nombre', data.nombre);
         localStorage.setItem('apellido', data.apellido);

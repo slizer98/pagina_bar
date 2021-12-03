@@ -247,6 +247,7 @@ main .modal-compra p{
     animation: orden-icon 4s linear infinite;
 }
 
+/* mover a la izquierda */
 @keyframes orden-icon{
     0%{
         transform: rotate(0deg);
@@ -266,7 +267,6 @@ main .modal-compra p{
     100%{
         transform: rotate(0deg);
     }
-    
 }
 
 

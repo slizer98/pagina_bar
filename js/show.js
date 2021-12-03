@@ -54,6 +54,9 @@ borrar.addEventListener('click', () => {
         })
             .then(res => res.json())
             .then(data => {
+
+                localStorage.clear();
+
                 console.log(data);
                 window.location.href = "./index.html";
             })

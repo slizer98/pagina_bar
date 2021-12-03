@@ -3,7 +3,6 @@ const pathReservacionEdit = 'reservaciones/';
 const id = localStorage.getItem('idReservacion');
 let formulario = document.getElementById('formulario');
 const modalCompra = document.querySelector('.modal-compra');
-const removeReservation = document.querySelector('.btn');
 
 
 document.getElementById('nombre').value = localStorage.getItem('nombre');

@@ -77,22 +77,13 @@ main .modal-compra p{
 
 @keyframes orden-icon{
     0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(180deg);
+        transform: translateX(0);
     }
     50%{
-        transform: rotate(0deg);
-    }
-    55%{
-        transform: rotate(0deg);
-    }
-    75%{
-        transform: rotate(-180deg);
+        transform: translateX(-20rem);
     }
     100%{
-        transform: rotate(0deg);
+        transform: translateX(0);
     }
     
 }
@@ -131,6 +122,20 @@ section{
     margin-top: 1rem;
     font-size: 2rem;
 }
+.btn-show{
+    display: none;
+    padding: 1.2rem 1.5rem;
+    border-radius: var(--border-radius);
+    color: var(--main-color);
+    background: none;
+    border: var(--border);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+.btn-none{
+    display: none;
+}
 .btn-1{
     display: inline-block;
     padding: .7rem 1.5rem;
@@ -142,7 +147,7 @@ section{
     margin-top: .3rem;
     font-size: .7rem;
 }
-.btn:hover{
+.btn:hover, .btn-show:hover{
     border-radius: var(--border-radius-hover);
     border: var(--border-hover);
 }
