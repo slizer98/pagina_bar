@@ -2,8 +2,10 @@ let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.navbar');
 let removeButton = document.getElementById('get-reservation');
 let removeShow = document.getElementById('show-reservation');
-
+let emoji = document.querySelector(".emoji")
+let verMas = document.getElementById("ver-mas")
 let texto = "Hola a todos. Nosotros somos el equipo 2, y nuestro proyecto es sobre un bar"
+
 const hablar = (texto) => speechSynthesis.
 speak(new SpeechSynthesisUtterance(texto));
 function presentacion(){
@@ -42,4 +44,10 @@ if(localStorage.getItem('reservacion') == 'true'){
     removeShow.style.display = 'inline-block';
 }
 
+verMas.addEventListener('click', () => {
+    emoji.style.display = 'inline-block';
+    setTimeout(() => {
+        emoji.style.display = 'none'
+    }, 1500)
+})
 
