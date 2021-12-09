@@ -27,6 +27,43 @@ function addCartClicked(event){
 
 function addItemsCart(boxTitle, boxPrice, boxImage, itemId){
 
+    let allProdducts = []
+    totalPrice = 0;
+ 
+    // agregar cada producto al array
+    allProdducts.push({
+        title: boxTitle,
+        price: boxPrice,
+    });
+    if(localStorage.getItem('shoppingCart') === null){
+        addToLocalStorage('shoppingCart', allProdducts);
+    }else{
+        let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
+        shoppingCart.push({
+            title: boxTitle,
+            price: boxPrice,
+        });
+        addToLocalStorage('shoppingCart', shoppingCart);
+    }
+    // quitar el signo de pesos del precio
+    boxPrice = boxPrice.replace('$', '');
+    // convertir el precio a numero
+    boxPrice = Number(boxPrice);
+
+    let data = {
+        title: boxTitle,
+        precio: boxPrice,    
+    }
+    console.log(data);
+    fetch(`http://127.0.0.1:8000/ordenes/`, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    
+    
     const elementsTitle = cartItemsContainer.getElementsByClassName('shoppingCartItemTitle');
 
     for(let i = 0; i < elementsTitle.length; i++){
@@ -38,6 +75,7 @@ function addItemsCart(boxTitle, boxPrice, boxImage, itemId){
            return;
         }
     }
+  
 
     const cartRow = document.createElement('div');
     const cartContent = `
@@ -91,6 +129,8 @@ function updateShoppingCart(){
         
     });
     shoppingCartTotal.innerHTML = `$${totalPrice.toFixed(2)}`;
+    // guardar total en local storage
+    addToLocalStorage('totalPrice', totalPrice);
     postToPOST(totalPrice);
 }
 
@@ -152,7 +192,7 @@ function getItemsInShoppingCart(){
         }
         arrShoppingCartItems.push(item);
     })
-    return arrShoppingCartItems;
+    console.log(arrShoppingCartItems);
 }
 
 function addToLocalStorage(key, items){

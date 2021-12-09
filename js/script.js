@@ -2,9 +2,25 @@ let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.navbar');
 let removeButton = document.getElementById('get-reservation');
 let removeShow = document.getElementById('show-reservation');
+let header = document.querySelector('.header');
 let emoji = document.querySelector(".emoji")
 let verMas = document.getElementById("ver-mas")
 let texto = "Hola a todos. Nosotros somos el equipo 2, y nuestro proyecto es sobre un bar"
+
+window.addEventListener("load", function () {
+    this.setTimeout(function () {
+        this.document.getElementById("loader").classList.toggle("loader2")
+    },1000)
+})
+// añadir header cuando la pagina termina de cargar
+window.onload = () =>{
+    setTimeout(() =>{
+        header.classList.add('add-header');
+
+    }, 1000)
+
+}
+
 
 const hablar = (texto) => speechSynthesis.
 speak(new SpeechSynthesisUtterance(texto));

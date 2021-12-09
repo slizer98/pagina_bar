@@ -9,7 +9,7 @@ document.getElementById('nombre').value = localStorage.getItem('nombre');
 document.getElementById('apellido').value = localStorage.getItem('apellido');
 document.getElementById('telefono').value = localStorage.getItem('telefono');
 document.getElementById('personas').value = localStorage.getItem('personas');
-document.getElementById('fecha').value = localStorage.getItem('fehca');
+document.getElementById('fecha').value = localStorage.getItem('fecha');
 document.getElementById('comentarios').value = localStorage.getItem('comentarios');
 
 
